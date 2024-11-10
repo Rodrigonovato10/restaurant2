@@ -25,7 +25,7 @@ class Database {
     }
 
     mongo() {
-        this.mongoConnection = mongoose.connect('mongodb://mongo:hEImIuioLqUrIavTecGaJiFmfTZGBfFM@junction.proxy.rlwy.net:21854');
+        this.mongoConnection = mongoose.connect('mongodb://${{MONGO_INITDB_ROOT_USERNAME}}:${{MONGO_INITDB_ROOT_PASSWORD}}@${{RAILWAY_TCP_PROXY_DOMAIN}}:${{RAILWAY_TCP_PROXY_PORT}}');
     }
 }
 
